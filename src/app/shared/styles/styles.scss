@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+* {
+     font-family: "Playfair Display", serif;
+     font-optical-sizing: auto;
+     font-weight: 800;
+     font-style: normal;
+     box-sizing: border-box;
+     margin: 0;
+     padding: 0;
+}
+
+h1 {
+     font-size: 69px;
+     font-weight: 900;
+     text-decoration: underline #EC8929 6px;
+}
+
+.group-buttons {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+     gap: 20px;
+     width: 100%;
+}
+
+.btn {
+     border: 4px solid transparent;
+     border-radius: 8px;
+     padding: 12px 24px;
+     font-family: 'Arial Black', sans-serif;
+     font-size: 18px;
+     text-shadow: 1px 1px 2px #000;
+     text-transform: uppercase;
+     letter-spacing: 1px;
+     cursor: pointer;
+     width: 99%;
+     transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn:hover {
+     width: 100%;
+     box-shadow: 0 0 15px #ff9800;
+
+     .gradiant {
+          background-image: linear-gradient(to bottom, #FED719, #c9a400);
+          text-shadow: 1px 1px 1px rgb(255 198 70 / 55%);
+     }
+}
+
+.btn-menu {
+     background: linear-gradient(to bottom, #5b14b8, #260643);
+     box-shadow: 0 0 8px #ff9800aa;
+     border-color: #ff7300;
+     color: #ff7300;
+
+     .gradiant {
+          font-size: 35px;
+          font-weight: 700;
+     }
+}
+
+.btn-play {
+     background: linear-gradient(to bottom, #5b14b8, #260643);
+     box-shadow: 0 0 14px #00b7ffaa;
+     border-color: #ae00ff;
+     color: #ffae00;
+
+     .gradiant {
+          font-size: 35px;
+          font-weight: 700;
+     }
+}
+
+.gradiant {
+     background-clip: text;
+     -webkit-background-clip: text;
+     -webkit-text-fill-color: transparent;
+     background-image: linear-gradient(to bottom, #FED719, #c91300);
+     text-shadow: 1px 1px 1px rgb(255 198 70 / 55%);
+     transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+input {
+     border-radius: 10px;
+     width: 100%;
+     padding: 10px 20px;
+     border: 3px solid #008cff;
+     background-color: transparent;
+     transition: all 0.3s ease;
+     outline: none;
+     color: #ff9800;
+     background-color: #008cff5d;
+     text-align: center;
+
+     &:hover {
+          box-shadow: 0 0 10px #008cff;
+     }
+
+     &:focus {
+          border-color: #ff9800;
+          box-shadow: 0 0 10px #ff9800;
+          font-size: 16px;
+          font-weight: 700;
+     }
+}

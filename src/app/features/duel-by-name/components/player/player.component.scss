@@ -1,0 +1,111 @@
+.content {
+     width: 100%;
+     max-width: 350px;
+     height: 100dvh;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+
+     .card {
+          height: 600px;
+          width: 100%;
+          display: flex;
+          align-items: center;
+          flex-direction: column;
+          border: 1px solid #ccc;
+          padding: 25px;
+
+          h4 {
+               font-size: 1.2rem;
+               margin-bottom: 2rem;
+               text-align: center;
+          }
+
+          .player {
+               width: 130px;
+               height: 130px;
+               object-fit: cover;
+               border: 3px solid #008cff;
+               border-radius: 3px;
+          }
+
+          .group-card {
+               width: 100%;
+               position: relative;
+
+               input {
+                    margin-bottom: 15px;
+               }
+
+               .cards-list {
+                    position: absolute;
+                    top: 45px;
+                    border-radius: 3px;
+                    left: 0;
+                    width: 100%;
+                    list-style: none;
+                    background-color: #008cff;
+
+                    .card-item {
+                         display: flex;
+                         align-items: center;
+                         margin-bottom: 10px;
+                         justify-content: space-between;
+                         padding: 10px;
+                         cursor: pointer;
+
+                         &:hover {
+                              background-color: #ff9800;
+
+                              .card-name {
+                                   color: #008cff;
+                              }
+                         }
+
+                         .card-name {
+                              font-size: 13px;
+                              color: #ff9800;
+                         }
+
+                         .card-image {
+                              width: 50px;
+                              height: 50px;
+                              object-fit: cover;
+                              border-radius: 3px;
+                         }
+                    }
+               }
+          }
+
+
+          .small-card {
+               max-width: 22px;
+               object-fit: cover;
+               border: none;
+               border-radius: 3px;
+          }
+
+          .card-reverse,
+          .card-image-chosen {
+               max-width: 66%;
+               object-fit: cover;
+               border: 3px solid #ffffff;
+               border-radius: 3px;
+          }
+
+          .description-card {
+               width: 100%;
+               margin-top: 10px;
+               padding: 10px;
+               border-radius: 3px;
+               background-color: #f0f0f0;
+               display: flex;
+               justify-content: space-between;
+               align-items: center;
+               border: 3px solid #008cff;
+               color: #ff9800;
+               background-color: #008cffc0;
+               text-align: center;
+          }
+     }
+}

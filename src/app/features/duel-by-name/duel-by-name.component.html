@@ -1,0 +1,41 @@
+<div class="container">
+     <app-header />
+
+     <div class="content-players">
+          @if ( !showWinner && !showLoser ) {
+               <app-player (cardChosenEvent)="onCardChosen($event, 'player')" playerName="YuGi"
+                    pathImage="../../../../../assets/images/yugi.png" />
+               <div class="vs">
+                    <h1 class="gradiant"> Vs </h1>
+                    @if ( player == null || bot == null ) {
+                         <p class="gradiant">
+                              Escoger una carta
+                         </p>
+                    } @else {
+                         <div class="group-buttons">
+                              <button class="btn btn-play" (click)="onAttack()"> Atacar </button>
+                              <button class="btn btn-play" (click)="onDefend()"> Defender </button>
+                         </div>
+                    }
+
+               </div>
+               <app-player (cardChosenEvent)="onCardChosen($event, 'bot')" playerName="Kaiba"
+                    pathImage="../../../../../assets/images/kaiba.png" />
+          } @else if( showWinner ) {
+               <div class="content-results">
+                    <div class="winner-box">
+                         <img src="/assets/images/yugi.png" alt="YuGi">
+                         <h1>¡Victoria!</h1>
+                    </div>
+               </div>
+          } @else if( showLoser ) {
+               <div class="content-results">
+                    <div class="loser-box">
+                         <img src="/assets/images/kaiba.png" alt="Kaiba">
+                         <h1>¡Derrota!</h1>
+                    </div>
+               </div>
+          }
+     </div>
+
+</div>

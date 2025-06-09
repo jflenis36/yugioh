@@ -1,0 +1,37 @@
+<div class="content">
+     <div class="card">
+          <img class="player" [src]="pathImage" [alt]="playerName">
+          <h4 class="gradiant"> {{ playerName }} </h4>
+
+          <div class="group-card">
+               <input [(ngModel)]="currentCardName" (keyup)="onCardNameChange($event)" type="text" name="card-name" id="card-name">
+               @if ( cards.length > 0 ) {
+                    <ul class="cards-list">
+                         @for ( card of cards; track card ) {
+                              <li class="card-item" (click)="onCardClick(card)">
+                              <!-- <li class="card-item"> -->
+                                   <span class="card-name">{{ card.name }}</span>
+                                   <img [src]="card.card_images[0].image_url_small" [alt]="card.name" class="small-card">
+                              </li>
+                         }
+                    </ul>
+               }
+          </div>
+
+          @if ( cardChosen == null ) {
+               <img src="assets/images/carta-reverso.png" alt="card image" class="card-reverse">
+          } @else {
+               <img [src]="cardChosen.card_images[0].image_url" alt="card image" class="card-image-chosen">
+               <p class="description-card">
+                    @if ( cardChosen.atk ) {
+                         ATK: {{ cardChosen.atk }} 
+                         <span class="space"> | </span>
+                         DEF: {{ cardChosen.def }} 
+                    } @else {
+                         No es una carta de monstruo
+                    }
+               </p>
+          }
+
+     </div>
+</div>

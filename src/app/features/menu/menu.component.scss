@@ -1,0 +1,48 @@
+.container {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+     height: 100dvh;
+     width: 100%;
+     background-image: url('../../../assets/images/fondo3.jpg');
+     background-size: cover;
+     background-repeat: no-repeat;
+     background-position: center;
+
+     header {
+          text-align: center;
+          min-width: 500px;
+
+          h1 {
+               margin-bottom: 50px;
+               font-size: 80px;
+          }
+     }
+
+     body {
+          min-width: 500px;
+
+          a {
+               text-align: center;
+               text-decoration: none;
+          }
+     }
+}
+
+@media screen and (max-width: 600px) {
+     .container {
+          header h1 {
+               font-size: 50px;
+          }
+
+          body {
+               min-width: 290px;
+
+               span {
+                    font-size: 20px;
+               }
+          }
+     }
+     
+}
